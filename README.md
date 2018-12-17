@@ -1,7 +1,7 @@
 # Use basic(html, css, javascript)
 
 1. hyundaicard<br>
-[만든 해당 사이트]: http://wjdgkrud.dothome.co.kr/hyundaicard/design_main.html
+http://wjdgkrud.dothome.co.kr/hyundaicard/design_main.html
 
 
 # Use **PHP**+mysql+basic(+jquery)
