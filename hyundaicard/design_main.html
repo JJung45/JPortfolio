@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="headerfooter/css/headerfooter.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--    <link rel="import" href="headerfooter/headerfooter.html">-->
+
+</head>
+
+<body>
+    <div id="wrap">
+        
+    <div class="header">
+        <div class="nav">
+            <div class="top_nav">
+                <div class="logo"></div>
+                <div class="search">
+                    <p>현대카드 라이브러리의 도서/음반을 검색해 보세요.</p>
+                </div>
+                <div class="cate">
+                    <a class="myBtn" id="loginBtn" href="#">로그인</a>
+                </div>
+            </div>
+            <div class="bottom_nav">
+                <ul>
+                    <li><a href="./index.html">HOME</a>
+
+                    </li>
+                    <li><a href="#">DESIGN LIBRARY</a>
+                        <ul class="dropmenu">
+                            <li><a href="design_main.html">DESIGN LIBRARY</a></li>
+                            <li><a href="design_about.html">ABOUT</a></li>
+                            <li><a href="design_books.html">BOOKS</a></li>
+                            <li><a href="design_highlightspot.html">HIGHLIGHT SPOT</a></li>
+                            <li><a href="design_program.html">PROGRAM</a></li>
+                            <li><a href="design_visit.html">VISIT</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">TRAVEL LIBRARY</a>
+                        <ul class="dropmenu">
+                            <li><a href="travel_main.html">TRAVEL LIBRARY</a></li>
+                            <li><a href="travel_about.html">ABOUT</a></li>
+                            <li><a href="design_books.html">BOOKS</a></li>
+                            <li><a href="travel_highlightspot.html">HIGHLIGHT SPOT</a></li>
+                            <li><a href="travel_program.html">PROGRAM</a></li>
+                            <li><a href="travel_visit.html">VISIT</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MUSIC LIBRARY</a>
+                        <ul class="dropmenu">
+                            <li><a href="music_main.html">MUSIC LIBRARY</a></li>
+                            <li><a href="music_about.html">ABOUT</a></li>
+                            <li><a href="design_books.html">BOOKS</a></li>
+                            <li><a href="music_highlightspot.html">HIGHLIGHT SPOT</a></li>
+                            <li><a href="music_program.html">PROGRAM</a></li>
+                            <li><a href="music_visit.html">VISIT</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">COOKING LIBRARY</a>
+                        <ul class="dropmenu">
+                            <li><a href="cooking_main.html">COOKING LIBRARY</a></li>
+                            <li><a href="cooking_about.html">ABOUT</a></li>
+                            <li><a href="design_books.html">BOOKS</a></li>
+                            <li><a href="cooking_highlightspot.html">HIGHLIGHT SPOT</a></li>
+                            <li><a href="cooking_program.html">PROGRAM</a></li>
+                            <li><a href="cooking_visit.html">VISIT</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal_login">
+        <div class="modal_box login">
+            <div class="modal_content">
+                <span class="close_btn_login">
+                      <span class="x_line1"></span>
+                <span class="x_line2"></span>
+                </span>
+                <h2>Log in</h2>
+                <form action="POST" class="logIn">
+                    <label for="userId">아이디</label>
+                    <input type="text" name="userId"><br>
+                    <label for="userPw">패스워드</label>
+                    <input type="password" name="userPw"><br>
+                    <div class="bottom_input">
+                        <input type="checkbox" name="idSave">아이디 저장
+
+                        <a href="#">아이디 찾기 / 비밀번호 찾기</a><br> </div>
+                    <input type="submit" value="로그인"><br>
+
+
+
+                </form>
+                <div class="modal_line"></div>
+                <div class="resister">
+                    <p><strong>현대카드 LIBRARY에 처음오셨나요?</strong> <br>회원가입을 하셔야 서비스 이용이 가능 합니다.</p>
+                    <a href="#" class="resister_btn" id="regiBtn">회원가입</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal_register">
+        <div class="modal_box register">
+            <div class="modal_content">
+                <span class="close_btn_regi">
+                      <span class="x_line1"></span>
+                <span class="x_line2"></span>
+                </span>
+                <h2>Register</h2>
+                <form action="joinOk.php" method="get" class="logIn" name="joinFrom">
+                    <label for="userId">아이디</label>
+                    <input type="text" name="userId"><br>
+                    <label for="userPw">패스워드</label>
+                    <input type="password" name="userPw" minlength="4" maxlength="8"><br>
+                    <label for="userPwChecked">패스워드<br>재확인</label>
+                    <input type="password" name="userPwChecked" minlength="4" maxlength="8"><br>
+                    <div class="txt"></div><br>
+                    <div class="modal_line"></div>
+                    <label for="userName">이름</label>
+                    <input type="text" name="userName"><br>
+                    <label for="userGender">성별</label>
+                    <input type="radio" name="userGender" value="man" checked> 남
+                    <input type="radio" name="userGender" value="woman"> 여<br>
+
+                    <label for="userMail">이메일</label>
+                    <input type="text" name="userMail"><br>
+                    <label for="userBirth">생년월일</label>
+                    <select name="userYear">
+                            <option value="default">-----</option>
+                        </select> 년
+                    <select name="userMonth">
+                            <option value="default">--</option>
+                        </select> 월
+                    <select name="userDate">
+                            <option value="default">--</option>
+                        </select> 일
+                    <br>
+                    <div class="modal_line"></div>
+                    <label for="userPhone[]">전화번호</label>010 -
+                    <input type="text" name="userPhone"> -
+                    <input type="text" name="userPhone">
+                    <br><br>
+
+                    <input type="button" id="submitBtn" value="회원가입"><br>
+
+
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+		<script>
+			var submitBtn=document.getElementById('submitBtn');
+			var joinFrom=document.getElementsByName('joinFrom')[0];
+			
+			
+			submitBtn.addEventListener('click',formSubmit);
+			
+			
+			function formSubmit(){
+				console.log(joinFrom.userName.value);
+				
+				var userNameVal=joinFrom.userName.value;
+				var userIdVal=joinFrom.userId.value;
+				var userPwVal=joinFrom.userPw.value;
+				var userPwValChVal=joinFrom.userPwChecked.value;
+				var spanTxt=document.getElementsByClassName('txt')[0];
+				
+				if(userNameVal=="" || userNameVal==null){
+					
+					alert("이름 입력 오류입니다");
+					joinFrom.userName.focus();
+					
+					return;
+				}
+				
+				
+				if(userIdVal=="" || userIdVal==null){
+					
+					alert("아이디 입력 오류입니다");
+					joinFrom.userId.focus();
+					
+					return;
+				}
+				
+				if(userPwVal=="" || userPwVal==null){
+						
+					alert("비빌번호 입력 오류입니다");
+					joinFrom.userPw.focus();
+					
+					return;
+				}
+				
+				
+				
+				alert('회원가입이 완료되었습니다!');// 서버에 전송
+				modalRegi.style.display = "none";
+				
+			}
+			
+				
+			var pwKey=joinFrom.userPwChecked;
+
+			pwKey.addEventListener('keyup',userPwKeyUp)
+
+				function userPwKeyUp(){
+					
+					var userPwVal=joinFrom.userPw.value;
+				    var userPwValChVal=joinFrom.userPwChecked.value;
+					var spanTxt=document.getElementsByClassName('txt')[0];
+					
+					if(userPwVal==userPwValChVal){
+						spanTxt.style.color="#00f";
+						spanTxt.textContent="비밀번호가 맞습니다";
+
+					}else{
+						spanTxt.style.color="#f00";
+						spanTxt.textContent="비밀번호가 틀립니다";
+
+					}
+				}
+		</script>
+			
+    
+        <div class="nav2">
+            <div class="navOverlap">
+                <div class="contentNav">
+                    <h1 class="navTop">
+                        <p class="p1">현대카드</p>
+                        <p class="p2"> DESIGN <br> LIBRARY
+                        </p>
+                    </h1>
+                    <div class="navMiddle">
+                        <p class="navMT">
+                            몰입의 시간 + 영감의 공간
+                        </p>
+                        <p class="navMU">
+                            책을 매개로 잊혀졌던 삶의 가치를 회복하고 몰입의 시간을 통해 지적인 영감을 얻을 수 있는 공간, <br> 이것이 현대카드가 지향하는 디자인라이브러리의 모습이다.
+                        </p>
+                    </div>
+                    <div class="navUnder">
+                        <span class="box1"> 더 알아보기 ></span>
+                        <span class="box1">360 VR 둘러보기  ></span>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="section sec1">
+            <div class="TopTxt">
+                <h1>HIGHLIGHT SPOT</h1>
+                <h2>놓치지 말아야 할 곳</h2>
+            </div>
+            <div class="center gallery sec1gall">
+                <div class="media">
+                    <div class="gallMedia">
+                    </div>
+                    <div class="center menu">
+                        <ul class="list">
+                            <li class="listnum">1</li>
+                            <li class="listnum">2</li>
+                            <li class="listnum">3</li>
+                            <li class="listnum">4</li>
+                            <li class="listnum">5</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <span class="arrowLeft sec1Arr"></span>
+            </div>
+            <div class="center sec1Txt">
+                <ul>
+                    <li>
+                        <p class="sec1TxtTop">
+                            집속의 집
+                        </p>
+                        <p class="sec1TxtUnder">
+                            집 속의 집을 짓다
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <span class="secBox">HIGHLIGHT SPOT 모두 보기 ></span>
+        </div>
+        <div class="section sec2">
+            <div class="TopTxt">
+                <h1>SOCIAL</h1>
+                <h2>인스타그램 속 #현대카드디자인라이브러리</h2>
+            </div>
+            <div class="sec2Gallery">
+                <ul>
+                    <li>
+                        <div class="txt">
+                            <p>Like #</p>
+                            <p>Comments #</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txt">
+                            <p>Like #</p>
+                            <p>Comments #</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txt">
+                            <p>Like #</p>
+                            <p>Comments #</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txt">
+                            <p>Like #</p>
+                            <p>Comments #</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txt">
+                            <p>Like #</p>
+                            <p>Comments #</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txt">
+                            <p>Like #</p>
+                            <p>Comments #</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txt">
+                            <p>Like #</p>
+                            <p>Comments #</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section sec3">
+            <div class="TopTxt">
+                <h1>전문가의 도서/음반 가이드</h1>
+                <h2>분야별 전문가들이 추천하는 도서와 음반을 소개합니다.</h2>
+            </div>
+            <div class="center gallery sec3gall">
+                <div class="media">
+                    <ul class="mediaul">
+                        <li class="mediali">
+                            <div class="sec3Content">
+                                <p class="txt1Sec3">건축가의 손끝으로부터</p>
+                                <p class="txt2Sec3">2018년 03월</p>
+                                <p class="txt3Sec3">건축가에게 종이는 영감의 근원이자 창조의 출발</p>
+                                <p class="txt4Sec3">최욱 건축가</p>
+                            </div>
+                        </li>
+
+                        <li class="mediali">
+                            <div class="sec3Content">
+                                <p class="txt1Sec3">건축가, 도시, 집을 이해할 수 있는 책</p>
+                                <p class="txt2Sec3">2018년 02월</p>
+                                <p class="txt3Sec3">건축은 삶을 설명하는 직업이다</p>
+                                <p class="txt4Sec3">최욱 건축가</p>
+                            </div>
+                        </li>
+                        <li class="mediali">
+                            <div class="sec3Content">
+                                <p class="txt1Sec3">최욱에게 꿈을 주는 건축가들</p>
+                                <p class="txt2Sec3">2018년 01월</p>
+                                <p class="txt3Sec3">건축은 직업이 아니라 인물의 꿈이 반영된 삶이다</p>
+                                <p class="txt4Sec3">최욱 건축가</p>
+                            </div>
+                        </li>
+                        <li class="mediali">
+                            <div class="sec3Content">
+                                <p class="txt1Sec3">10대 때 읽은 최욱의 건축 입문서</p>
+                                <p class="txt2Sec3">2017년 12월</p>
+                                <p class="txt3Sec3">건축은 생각을 구축하는 학물</p>
+                                <p class="txt4Sec3">최욱 건축가</p>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <span class="sec3Arrow sec3ArrLeft"></span>
+                    <span class="sec3Arrow sec3ArrRight"></span>
+                </div>
+            </div>
+            <span class="secBox">도서/음반 가이드 전체 보기</span>
+        </div>
+        <div class="section sec4">
+            <div class="TopTxt">
+                <h1>BOOKS</h1>
+                <h2>근대 디자인 정신이 태동한 바우하우스 이후의 디자인 장서</h2>
+            </div>
+            <div class="sec4Box1">
+                <ul class="sec4content">
+                    <li class="sec4contentLeft">
+                        <p class="sec4Toptxt">3개월 동안 많이 열람한 도서 </p>
+
+                        <div class="book">
+                        </div>
+                        <div class="sec4Under"></div>
+                    </li>
+                    <li class="sec4contentRight">
+
+                        <table>
+                            <tr>
+                                <td class="num">1</td>
+                                <td>Made in North Korea</td>
+                                <td>Nicholas Bonner</td>
+                            </tr>
+                            <tr>
+                                <td class="num">2</td>
+                                <td>BB2</td>
+                                <td>곽은정</td>
+                            </tr>
+                            <tr>
+                                <td class="num">3</td>
+                                <td>Muji</td>
+                                <td>&#91;authors, Massk...&#93;</td>
+                            </tr>
+                            <tr>
+                                <td class="num">4</td>
+                                <td>(좋아 보이는 것들의 비밀)브랜드 디자인</td>
+                                <td>최영인 지음</td>
+                            </tr>
+                            <tr>
+                                <td class="num">5</td>
+                                <td>브랜드 디자인</td>
+                                <td>디자인 매거진 CA 편...</td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+            <div class="sec4Box2">
+                <ul class="center sec4top">
+                    <li>
+                        <p>New | 신규 도서</p>
+                        <div class="sec4Bar"></div>
+                    </li>
+
+                    <li>
+                        <p>Essential | 추천 도서</p>
+                        <div class="sec4Bar"></div>
+                    </li>
+
+                </ul>
+
+
+                <ul class="center sec4mid">
+                    <li class="aboutBook">
+                        <div class="sec4M sec4content2Right"><img class="backbook" src="img/bg4_3_0.jpg" alt="x"><img class="mainbook" src="img/bg4_3_0.jpg" alt="x"></div>
+                        <div class="sec4M sec4content2Left">
+                            <p class="sec4Top2">100권의 디자인 잡지</p>
+                            <p class="sec4Mid2">디자이너라면 꼭 알아야 할 100권의 디자인 잡지를 소개한 책이다. 각 잡지별 탄생 배경과 디자인의 의미를 설명하고 당시 제작에 참여했던 에디터와 디자이너들의 코멘트를 담았다. 특히, 국내에서는 쉽게 접하기 힘든 1800~1900년대 잡지들의 표지와 내지 이미지도 볼 수 있다.</p>
+                            <div class="sec4UnderMain">
+                                <div class="sec4Under2">
+                                    저자/역자<span class="sec4Writer">스티븐 헬러</span> </div>
+                                <div class="sec4Under3"> 출판사<span class="sec4Writer"> Sigongart</span></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="aboutBook">
+                        <div class="sec4M sec4content2Right"><img class="backbook" src="img/DB0000008459.jpg" alt="x"><img class="mainbook" src="img/DB0000008459.jpg" alt="x"></div>
+                        <div class="sec4M sec4M sec4content2Left">
+                            <p class="sec4Top2">디자인 아이콘</p>
+                            <p class="sec4Mid2">런던 디자인 뮤지엄과 저자의 협업으로 탄생한, 디자인 세계와 모든 디자인 양상을 개괄하는 소개서. 광범위한 디자인 예시를 통해 디자인이란 무엇인가부터 제작과 생산 등에 이르기까지 실제 디자인 실무에 대한 조언도 충실히 담고 있다.
+                            </p>
+                            <div class="sec4UnderMain">
+                                <div class="sec4Under2">
+                                    저자/역자<span class="sec4Writer">  개러스 윌리엄스 지음 </span> </div>
+                                <div class="sec4Under3">출판사 <span class="sec4Writer"> Sigongart</span></div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+                <ul class="sec4round">
+                    <li><span></span></li>
+                    <li><span></span></li>
+                </ul>
+                <span class="center secBox">BOOKS 모두 보기 ></span>
+            </div>
+        </div>
+        <div class="section sec5">
+            <ul class="center sec5top">
+                <li><p>Rare Collection | 희귀본 컬렉션</p> <div class="sec5Bar "></div></li>
+                <li><p>LIFE Collection | LIFE 컬렉션</p><div class="sec5Bar"></div></li>
+                <li><p>Designer of the Month</p><div class="sec5Bar"></div></li>
+            </ul>
+            <ul class="center sec5mid">
+              <li class="aboutmore">
+                  <div class="sec5Gallery"> <img class="sec5first" src="img/bg5_0.jpg" alt="x"></div>    
+                <div class="sec5Txt">
+                            <p class="sec5UnderTop">The Power of Movement</p>
+                            <p class="sec5UnderUnder">멈추지 않는 에너지 <br>2018.03</p>
+                            </div>
+                            </li>
+                            
+                    <li class="aboutmore">
+               <div class="sec5Gallery"> <img class="sec5first" src="img/bg5_1.jpg" alt="x"></div>    
+                <div class="sec5Txt">
+                           <p class="sec5UnderTop">The Hottest Winter</p>
+                        <p class="sec5UnderUnder">뜨거웠던 2018 평창 동계올림픽 <br>2018.03</p>   
+                            </div>
+                            </li>
+                            
+                    <li class="aboutmore">
+               <div class="sec5Gallery"> 
+               <img class="sec5first" src="img/bg5_2.jpg" alt="x"></div>    
+                <div class="sec5Txt">
+                           
+                       <p class="sec5UnderTop">Walter Gropius</p>
+                    <p class="sec5UnderUnder">바우하우스(Bauhaus)의 창시자이자 위대한 모더니즘 건축가<br>2018.03</p> 
+                            </div>
+                            </li>      
+            </ul>
+            <span class="secBox">COLLECTION 모두 보기 ></span>
+        </div>
+        <div class="section sec6">
+            <div class="TopTxt">
+                <h1>PROGRAM</h1>
+                <h2>영감을 나누는 전시와 토크</h2>
+            </div>
+            <ul class="center gallerySec6">
+                <li class="box1Sec6">
+                    <div class="gallSec6 "></div>
+                    <div class="contentSec6">
+                        <div class="txtSec6">
+                            <p class="txt1Sec6">The Icon of Finnish Design : Eero Aarnio</p>
+                            <p class="txt2Sec6">간결함으로 완성되는 일상의 디자인</p>
+                            <p class="txt3Sec6">
+                                [ 2018.01.30 - 2018.05.13 ]
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="box2Sec6">
+                    <div class="gallSec6 num2Sec6"></div>
+                    <div class="contentSec6">
+                        <div class="txtSec6">
+                            <p class="txt1Sec6">도시는 어떻게 영감의 원천으로 작용하나</p>
+                            <p class="txt2Sec6">도시재생 전문가, 김정후 박사가 전하는 도시의 미래</p>
+                            <p class="txt3Sec6">
+                                [ 2018.03.27 ]
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <span class="secBox">PROGRAM 모두 보기 ></span>
+        </div>
+        <div class="section sec7">
+            <div class="TopTxt">
+                <h1>VIDEO CLIPS</h1>
+                <h2>영상으로 만나는 디자인 라이브러리</h2>
+            </div>
+            <div class="nav7">
+            <div class="gallery">
+                <ul class="gallery_li">
+                    <li>
+                        <p class="sec7Txt1">| LIBRARY TALK 01. Inspiration Week : Design Library</p>
+                        <p class="sec7Txt2">영감을 공유하는 라이브러리에서의 1주일 : 건축가 최욱</p>
+                        <iframe width="1000" height="700" src="https://www.youtube.com/embed/u5H1TB0dQjA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <p class="sec7Txt1">| Inspiration TALK 08. 허영만</p>
+                        <p class="sec7Txt2">새로운 가지들이 돋아 제대로 된 나무 모양을 만들 듯</p>
+                        <iframe width="1000" height="700" src="https://www.youtube.com/embed/uQlk4GdOICE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <p class="sec7Txt1">| LIBRARY CARTOON 20. 의자</p>
+                        <p class="sec7Txt2">의자 디자인과 그 의미를 만나다.</p>
+                        <iframe width="1000" height="700" src="https://www.youtube.com/embed/dHuxBMXDD58" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <p class="sec7Txt1">| Inspiration TALK 08. 허영만</p>
+                        <p class="sec7Txt2">새로운 가지들이 돋아 제대로 된 나무 모양을 만들 듯</p>
+                        <iframe width="1000" height="700" src="https://www.youtube.com/embed/uQlk4GdOICE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </li>
+                    <li>
+                        <p class="sec7Txt1">| LIBRARY CARTOON 20. 의자</p>
+                        <p class="sec7Txt2">의자 디자인과 그 의미를 만나다.</p>
+                        <iframe width="1000" height="700" src="https://www.youtube.com/embed/dHuxBMXDD58" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </li>
+                </ul>
+                 <div class="items">
+                    <ul>
+
+                        <li class="on"></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <span class="sec7Arrow sec7ArrLeft"></span>
+                <span class="sec7Arrow sec7ArrRight"></span>
+            </div>
+             <p class="typing"></p>
+        <a href="#" class="secBox">VIDEO CLIPS 모두 보기</a>
+            </div>
+            <span class="secBox">VIDEO CLIPS 모두 보기 ></span>
+        </div>
+        <div class="section sec8">
+            <div class="overlapSec8">
+                <div class="TopTxt">
+                    <h1>VISIT</h1>
+                    <h2>이용 안내</h2>
+                </div>
+                <div class="nextSec8 map">
+                    <div class="location"></div>
+                    <p class="txtSec8">서울시 종로구 북촌로 31-18 <br> T 02-3700-2700 <br> E designlibrary@hcs.com</p>
+                </div>
+                <div class="nextSec8 txtSec8Top">
+                    <p class="txtSec8main">오늘의 운영 시간</p> <br>
+                    <p class="txtSec8mainBig">PM 12:00 ~ PM 09:00</p>
+                    <p class="txtSec8main">Membership</p> <br>
+                    <p class="txtSec8under">
+                        회원 본인 및 동반 2인 무료 입장 <br> 만 19세 이상, 월 8회 한정
+                        <br><br> 현대카드 회원 전용(무기명 법인카드 및 Gift카드 제외)
+                        <br> 연령 및 본인 확인을 위해 본인 및 동반인 신분증 지참
+                        <br> 회원 본인 동반 없이 비회원 입장 불가
+                        <br> 본인 입장 횟수 및 동반 2인 초과 시 Library 입장 불가
+                        <br> 쾌적한 열람을 위해 동시 열람인원 50명 제한(대기 입장 가능)
+                </div>
+                <span class="secBox">VISIT 전체보기 ></span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="ftop">
+                <ul>
+                    <li>NOTICE　　　</li>
+                    <li><a href="#">ㅣ　　2018.02.14  [ Library Home ]  현대카드 LIBRARY 설연휴 휴관 안내　　></a></li>
+                    <li class="line"></li>
+                </ul>
+            </div>
+            <div class="btop">
+                <ul>
+                    <li class="img"><img src="headerfooter/img/foot_logo.png" alt=""></li>
+                    <li class="txt1">서울특별시 영등포구 의사당대로3 현대캐피탈빌딩 | 대표이사 정태영</li>
+                    <li class="txt2">사업자등록번호 213-86-15419 ⓒ HYUNDAI CARD Corp</li>
+                    <li class="box">
+                        <a href="">패밀리</a>
+                        <span class="icon"></span>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        /*nav 효과*/
+        var box1 = document.getElementsByClassName('box1');
+
+
+        box1[0].addEventListener('mouseover', box1colorChange)
+
+        function box1colorChange() {
+            box1[0].style.background = "#ccc";
+            box1[0].style.boxshadow = " 1px 5px 10px #000a";
+        }
+
+        box1[0].addEventListener('mouseout', box1colorReset)
+
+        function box1colorReset() {
+            box1[0].style.background = "#000";
+            box1[0].style.boxshadow = "none";
+        }
+
+
+        box1[1].addEventListener('mouseover', box1colorChange1)
+
+        function box1colorChange1() {
+            box1[1].style.background = "#ccc";
+            box1[1].style.boxshadow = " 1px 5px 10px #000a";
+        }
+
+        box1[1].addEventListener('mouseout', box1colorReset1)
+
+        function box1colorReset1() {
+            box1[1].style.background = "#000";
+            box1[1].style.boxshadow = "none";
+        }
+
+
+        /*sec1 효과*/
+        var listnum = $('.listnum');
+        var arrBg = [];
+        var gallMedia = $('.gallMedia');
+        var sec1TxtTop = $('.sec1TxtTop');
+        var sec1TxtUnder = $('.sec1TxtUnder');
+
+
+        listnum.on('mouseover', function(e) {
+            $(this).css({
+                color: '#fff'
+            })
+        })
+        listnum.on('click', func);
+        for (var i = 0; i < listnum.length; i++) {
+            arrBg.push('url(img/bg' + i + '.jpg) no-repeat 50%');
+        }
+
+        gallMedia.css({
+            background: 'url(img/bg0.jpg) no-repeat 50%'
+        });
+
+        function func(e) {
+            var idx = $(this).index();
+            gallMedia.css({
+                background: arrBg[idx],
+                width: '100%',
+                height: '500px'
+
+            });
+            switch (idx) {
+                case 0:
+                    sec1TxtTop.text("집속의 집");
+                    sec1TxtUnder.text("집 속의 집을 짓다");
+                    break;
+                case 1:
+                    sec1TxtTop.text("기오헌");
+                    sec1TxtUnder.text("겸양과 몰입으로 이끄는 공간");
+                    break;
+                case 2:
+                    sec1TxtTop.text("희귀본 컬렉션");
+                    sec1TxtUnder.text("보다 가치있는 400여 권의 희귀본 컬렉션");
+                    break;
+                case 3:
+                    sec1TxtTop.text("도두스 컬렉션");
+                    sec1TxtUnder.text("이탈리아 건축 전문잡지 <Domus> 전 컬렉션");
+                    break;
+                default:
+                    sec1TxtTop.text("라이프 컬렉션");
+                    sec1TxtUnder.text("미국 포토저널리즘 대중문화 잡지<LIFE> 전 컬렉션");
+                    break;
+            }
+        }
+
+        /*sec2시작*/
+        var sec2Gallery = $('.sec2Gallery');
+        var sec2GalleryList = $('.sec2Gallery ul>li');
+        var ListSize = $('.sec2Gallery ul>li').length;
+
+        var arrImg = [];
+        for (var i = 0; i < ListSize; i++) {
+            arrImg.push('url(img/bg_' + i + '.png) no-repeat 50%');
+            sec2GalleryList.eq(i).css({
+                background: arrImg[i],
+                backgroundSize: 'cover'
+            })
+
+        }
+
+        sec2GalleryList.hover(
+            function(e) {
+                //마우스 오버시
+                $(this).css({
+                    backgroundSize: '120%'
+                });
+                $(this).find('.txt').fadeIn();
+            },
+            function(e) {
+                //마우스 아웃시
+                $(this).css({
+                    backgroundSize: 'cover'
+                });
+                $(this).find('.txt').fadeOut();
+            }
+        )
+        /*sec3시작*/
+
+        var media = $('.media');
+        var mediaul = $('.mediaul');
+        var sec3ArrLeft = $('.sec3ArrLeft');
+        var sec3ArrRight = $('.sec3ArrRight');
+        var mediali = $('.mediali');
+
+        var arrBg3 = [];
+        for (var i = 0; i < mediali.length; i++) {
+            arrBg3.push('url(img/bg3_' + i + '.jpg) no-repeat 50%');
+            mediali.eq(i).css({
+                background: arrBg3[i],
+                backgroundSize: 'cover'
+            })
+        }
+
+
+        sec3ArrLeft.on('click', function(e) {
+            var mediali = $('.mediali');
+            var liFirst = mediali.eq(0);
+            mediaul.append(liFirst);
+
+        })
+
+        sec3ArrRight.on('click', function(e) {
+            var mediali = $('.mediali');
+            var liLast = mediali.eq(3);
+
+            mediaul.prepend(liLast);
+        })
+
+        /*sec4-1*/
+        var tr = $('.sec4contentRight tr');
+        var book = $('.sec4contentLeft .book');
+        var sec4Under = $('.sec4contentLeft  .sec4Under');
+
+        var arrbg4 = [];
+        for (var i = 0; i < 5; i++) {
+            arrbg4.push('url(img/bg4_2_' + i + '.jpg) no-repeat 50%');
+        }
+
+        book.css({
+            background: arrbg4[0],
+            backgroundSize: 'cover'
+
+        });
+        sec4Under.text('Made in North Korea');
+        tr.on('click', function(e) {
+            var idx = tr.index(this);
+            switch (idx) {
+                case 0:
+                    book.css({
+                        background: arrbg4[idx],
+                        backgroundSize: 'cover'
+
+                    });
+                    sec4Under.text("Made in North Korea");
+                    break;
+                case 1:
+                    book.css({
+                        background: arrbg4[idx],
+                        backgroundSize: 'cover'
+                    });
+                    sec4Under.text("BB2");
+                    break;
+                case 2:
+                    book.css({
+                        background: arrbg4[idx],
+                        backgroundSize: 'cover'
+
+                    });
+                    sec4Under.text("Muji");
+                    break;
+                case 3:
+                    book.css({
+                        background: arrbg4[idx],
+                        backgroundSize: 'cover'
+
+                    });
+                    sec4Under.text("()브랜드 디자인");
+                    break;
+                default:
+                    book.css({
+                        background: arrbg4[idx],
+                        backgroundSize: 'cover'
+                    });
+                    sec4Under.text("브랜드 디자인");
+                    break;
+            }
+        })
+
+        /*sec4-2*/
+        var sec4topli = $('.sec4top li');
+        var sec4Bar = $('.sec4Bar');
+        var aboutBook = $('.aboutBook');
+
+        sec4topli.eq(0).css({
+            color: '#000'
+        })
+        sec4topli.on('click', function(e) {
+            var idx = $(this).index();
+            $(this).css({
+                color: '#000'
+            })
+            $(this).siblings().css({
+                color: '#ccc'
+            })
+            $(this).find('.sec4Bar').css({
+                background: '#000'
+            })
+            $(this).siblings().find('.sec4Bar').css({
+                background: '#ccc'
+            })
+            aboutBook.eq(idx).fadeIn();
+            aboutBook.eq(idx).siblings().fadeOut();
+        })
+
+        /*sec5*/
+        var sec5topli = $('.sec5top li');
+        var sec5Bar = $('.sec5Bar');
+        var aboutmore=$('.aboutmore');
+        
+        sec5topli.eq(0).css({
+            color: '#000'
+        })
+        sec5topli.on('click',function(e){
+            var idx =$(this).index();
+            $(this).css({
+                color: '#000'
+            })
+            $(this).siblings().css({
+                color:'#ccc'
+            })
+            $(this).find('.sec5Bar').css({
+                background: '#000'
+            })
+            $(this).siblings().find('.sec5Bar').css({
+                background: '#ccc'
+            })
+            aboutmore.eq(idx).fadeIn();
+            aboutmore.eq(idx).siblings().fadeOut();
+        })
+        
+        /*sec7*/
+            //typing effect
+        var i = 0;
+        var txt = '"음악은 삶에 영향을 미치는 것이 아니라 삶을 대하는 우리의 태도에 영향을 미친다" 2017년 12월 15일, 현대카드 라이브러리에서 진행된 Inspiration Week 배순탁 작가의 음악과 인생이야기 그 뜨거웠던 현장의 감동을 지금 영상으로 만나보세요'; /* The text */
+        var speed = 100; /* The speed/duration of the effect in milliseconds */
+        typeWriter();
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementsByClassName("typing")[0].innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+        
+          var nav7 = $('.nav7');
+        var gallery = $('.gallery');
+        var galleryUl = $('.gallery>ul');
+        var galleryUlLi = $('.gallery>ul>li');
+        var items = $('.items');
+        var itemUlLi = $('.items li');
+        var arrowLeft = $('span.sec7ArrLeft');
+        var arrowRight = $('span.sec7ArrRight');
+
+        var galleryUlLiLength = galleryUlLi.length;
+
+        var galleryLeft =
+            galleryUlLi.eq(0).offset().left - galleryUlLi.eq(1).offset().left;
+        console.log(galleryLeft);
+
+
+
+        var key = 1;
+
+        function autoGallery() {
+            key++;
+            galleryUl.animate({
+                left: galleryLeft * key
+            });
+            console.log(galleryUl.css('left'));
+            console.log(galleryUlLiLength);
+            if (key > galleryUlLiLength - 3) {
+                key = 1;
+                galleryUl.delay(3000).animate({
+                    left: galleryLeft * key
+                }, 0);
+            }
+            itemUlLi.eq(key - 1).addClass('on').siblings().removeClass('on');
+        }
+
+        var setInt = setInterval(autoGallery, 5000);
+
+        $('.sec7Arrow').hover(
+            function() {
+                clearInterval(setInt);
+            },
+            function() {
+                setInt = setInterval(autoGallery, 5000);
+            }
+
+        )
+
+        arrowLeft.on('click', function() {
+            key--;
+            galleryUl.animate({
+                left: galleryLeft * key
+            });
+            if (key == 0) {
+                key = 3;
+                galleryUl.animate({
+                    left: galleryLeft * key
+                }, 0);
+            }
+            itemUlLi.eq(key - 1).addClass('on').siblings().removeClass('on');
+        })
+        arrowRight.on('click', function() {
+            key++;
+            galleryUl.animate({
+                left: galleryLeft * key
+            });
+            if (key == 4) {
+                key = 1;
+                galleryUl.animate({
+                    left: galleryLeft * key
+                }, 0);
+            }
+            itemUlLi.eq(key - 1).addClass('on').siblings().removeClass('on');
+        })
+
+        itemUlLi.hover(
+            function() {
+                clearInterval(setInt);
+            },
+            function() {
+                setInt = setInterval(autoGallery, 5000);
+            }
+
+        )
+
+        itemUlLi.on('click', function() {
+            $(this).addClass('on');
+            $(this).siblings().removeClass('on');
+            var index7 = itemUlLi.index7(this);
+            key = index7 + 1;
+            galleryUl.animate({
+                left: galleryLeft * key
+            });
+
+        })
+    </script>
+</body>
+
+</html>
