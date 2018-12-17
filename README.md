@@ -14,7 +14,3 @@ http://wjdgkrud.dothome.co.kr/portpoilo/earthtory.php
 http://wjdgkrud.dothome.co.kr/project42/contents/main.php
 4. zara<br>
 http://wjdgkrud.dothome.co.kr/zara/
-
-# Use **nodejs**+mysql+basic(+jquery)
-
-1. travelDiary_express_v2
