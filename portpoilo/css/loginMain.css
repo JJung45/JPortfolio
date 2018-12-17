@@ -1,0 +1,75 @@
+#overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .8);
+}
+.loginmodal {
+    width: 368px;
+    height: 386px;
+    position: absolute;
+    background: #fff;
+    border-top: 3px solid;
+}
+.loginmodal .loginFirst {
+    width: 100%;
+    height: 62px;
+    border-bottom: 1px solid #999;
+}
+.loginmodal .loginFirst p {
+    float: left;
+    padding-left: 10px;
+    font-size: 18px;
+    line-height: 62px;
+}
+.loginmodal .loginFirst span {
+    float: right;
+    font-size: 30px;
+    line-height: 55px;
+    font-weight: 100;
+    color: #999;
+    padding-right: 10px;
+    cursor: pointer;
+}
+.loginmodal .loginSecond {
+    width: 100%;
+}
+.loginmodal input{
+    display: block;
+    width: 90%;
+    height: 30px;
+    margin: 0 auto;
+}
+.loginmodal input.text{
+    text-indent: 5px;
+}
+.loginmodal input.email{
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+.loginmodal input[type='submit']{
+    border: 0px;
+    height: 40px;
+    background: #1a7ad9;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.loginmodal ul{
+    padding-top: 20px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+.loginmodal ul>li{
+    float: left;
+    width: 50%;
+    color: #000;
+     font-size: 14px;
+}
+.loginmodal ul>li.findPw{
+    border-right: 1px solid;
+    box-sizing: border-box;
+}

@@ -1,0 +1,72 @@
+#overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .8);
+}
+.joinmodal {
+    width: 368px;
+    height: 386px;
+    position: absolute;
+    background: #fff;
+    border-top: 3px solid;
+}
+.joinmodal .joinFirst{
+    width: 100%;
+    height: 62px;
+    border-bottom: 1px solid #999;
+}
+.joinmodal .joinFirst p {
+    float: left;
+    padding-left: 10px;
+    font-size: 18px;
+    line-height: 62px;
+}
+.joinmodal .joinFirst span {
+    float: right;
+    font-size: 30px;
+    line-height: 55px;
+    font-weight: 100;
+    color: #999;
+    padding-right: 10px;
+    cursor: pointer;
+}
+.joinmodal .joinSecond {
+    width: 100%;
+}
+.joinmodal input{
+    display: block;
+    width: 90%;
+    height: 30px;
+    margin: 0 auto;
+    text-indent: 5px;
+}
+.joinmodal input.name{
+    margin-top: 30px;
+}
+.joinmodal input[type='radio']{
+    display: inline;
+    width: 20%;
+    height:20px;
+    border: none;
+    background: #fff;
+}
+.joinmodal input[type='submit']{
+    border: 0px;
+    height: 40px;
+    background: #1a7ad9;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 20px;
+    text-indent: 0px;
+}
+.joinmodal .joinThird{
+    width: 90%;
+    margin: 10px auto 0;
+    font-size: 14px;
+}
+.joinmodal .joinThird a{
+    color: #1a7ad9;
+}

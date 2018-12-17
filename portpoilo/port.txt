@@ -1,0 +1,26 @@
+header 62*1902
+   gnb 62*165
+nav 455*1902
+  navcontent 455*640
+section1  534*1902
+  sec1content 534*1092
+section2  1076*1902
+  sec2content 1076*1092
+section3  938*1902
+  sec3content 938*1092
+section4 1038*1902
+  sec3content 1038*1092
+section 5 383*1902
+footer 224*1902
+  footerup 203*1902
+  fotoerdown 22*1902
+
+
+http://wordpresser.co.kr/?p=5038
+
+cover : 배경을 설정한 태그에 배경 이미지가 꽉 차서 여백이 없도록
+contain : 배경을 설정한 태그 안에 배경 이미지가 다 보이게 담기도록
+
+
+
+sec3 내가 원하는 디자인으로 수정하기

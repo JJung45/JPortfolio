@@ -1,0 +1,658 @@
+@charset "utf-8";
+#wrap{
+    width: 100%;
+    height: 4700px;
+}
+.header{
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+}
+.nav{
+    width: 100%;
+    height: 455px;
+    background: #ccc;
+}
+section{
+    width: 100%;
+    max-width: 1902px;
+    height: 474px;
+     overflow: hidden;
+
+}
+/*header 시작*/
+.header .gnb{
+    width: 100%;
+    max-width: 1065px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px 0;
+}
+.header .gnb .logo{
+    width: 176px;
+    height: 37px;
+    background: url(../img/logo.png) no-repeat 50%;
+    float: left;
+    cursor: pointer;
+}
+.header .gnb ul.mainMenu>li{
+    float: left;
+    margin-left: 5%;
+    padding: 13px 0;
+    font-size: 14px;
+}
+.header .gnb ul.subMenu{
+    float: right;
+}
+.header .gnb ul.subMenu>li{
+    float: left;
+    padding: 9.5px 0;
+}
+.header li{
+    margin-left: 5px;
+}
+.header .login{
+    background: #ff9320;
+}
+.header .join{
+    background: #49b2e9;
+}
+.header .login,.join{
+    border: 0px solid;
+    color: #fff;
+    font-size: 10.5px;
+    padding: 7px 8px;
+}
+.header input[type="search"]{
+    width: 150px;
+    font-size: 10.5px;
+    padding: 4px 5px;
+}
+.header li.menubar{
+	width: 50px;
+	height: 10px;
+	background: url(../img/menubar.png) no-repeat 50%;
+	background-size: contain;
+	display: none;
+    cursor: pointer;
+    z-index: 9;
+}
+.header li.menubar ul{
+	display: none;
+	position: relative;
+	right: 107px;
+	top: -15px;
+	width: 150px;
+	line-height: 30px;
+	color: #fff;
+    background: #000c;
+    overflow: hidden;
+    z-index: 9;
+}
+.header li.menubar ul>li{
+    margin-bottom: 10px;
+    margin-left: 0px;
+    padding-left: 10px;
+}
+/*
+.header li.menubar ul span{
+    float: right;
+    font-size: 25px;
+    line-height: 20px;
+    cursor: pointer;
+}
+*/
+@media only screen and (max-width: 940px){
+	.header .mainMenu{
+	overflow: hidden;
+	position: relative;
+	}
+	.header li.menubar{
+	display: block;
+	position:fixed;
+	right: 20px;
+		
+	}
+    .header .logo{
+        width: 50%;
+    }
+	.header li.main{
+		display: none;
+	}
+    .header ul.subMenu{
+        display: none;
+    }
+    .header li.menubar li.loginetc{
+    padding: 0px;
+}
+.header li.menubar .login,.join{
+    float: left;
+    width: 50%;
+    text-align: center;
+    padding: 0px;
+    }
+}
+
+/*nav 시작*/
+.nav .navContent{
+    width: 100%;
+    max-width: 640px;
+    height: 455px;
+    margin: 0 auto;
+}
+.navContent .navUp{
+    color: #fff;
+    padding: 70px 80px;
+}
+.navContent .navUp h1{
+    font-size: 35px;
+    text-align: center;
+}
+.navContent .navUp h2{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+}
+.nav .navDown{
+    width: 100%;
+    max-width: 640px;
+    height: 150px;
+    background: #000c;
+}
+.nav .navDown form{
+    text-align: center;
+}
+.nav .navDown input[type='search']{
+    width: 90%;
+    height: 50px;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+}
+.nav .navDown p{
+    color: #fff;
+    width: 90%;
+    margin: 10px auto;
+    font-size: 14px;
+}
+.nav .navDown span{
+    float: right;
+}
+@media only screen and (max-width: 640px){
+    .navContent .navUp{
+    color: #fff;
+    padding: 70px 0 ;
+    }
+	.navContent .navUp h1{
+        font-size: 30px;
+    }
+    .navContent .navUp h2{
+        font-size: 20px;
+    }
+}
+
+/*sec1contents 시작*/
+section.sec1{
+    width: 100%;
+    height: 700px;
+   
+}
+section .sec1contents{
+    width: 100%;
+    max-width: 1092px;
+    height: 474px;/*414px*/
+    margin: 0 auto;
+    overflow: hidden;
+}
+section .sec1contents h2{
+    margin-top: 70px;
+    margin-bottom: 50px;
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+}
+section .sec1contents h4{
+    font-size: 17px;
+    text-align: center;
+    color: #1a7ad9;   
+    
+}
+section .sec1contents .sec1gallery{
+    /*width값 주지 말것*/
+    height: 170px;
+}
+section .sec1contents .sec1txt h4{
+    padding: 30px;
+}
+section .sec1contents .sec1txt p{
+    font-size: 14px;
+    line-height: 20px;
+}
+section p.sec1undertxt{
+    font-size: 13px;
+    color: #ff9320;
+    text-decoration: underline;
+    text-align: center;
+}
+
+@media only screen and (max-width: 780px){
+    section.sec1{
+    width: 100%;
+    height: 1350px;
+}
+    section .sec1contents{
+    width: 100%;
+    max-width: 1092px;
+    height: 1000px;/*414px*/
+    margin: 0 auto;
+    overflow: hidden;
+}
+    section .sec1contents .sec1txt p{
+      text-align: center;
+      padding-bottom: 20px;
+}
+    section p.sec1undertxt{
+    padding-top: 50px;
+}
+}
+
+/*sec1 best 시작*/
+section.sec1 .best{
+    width: 100%;
+    max-width: 1092px;
+    height: 150px;
+    margin: 50px auto 0 auto;
+}
+section.sec1 .best .bestgallery{
+    height: 100px;
+}
+section.sec1 .besttxt{
+    text-align: center;
+    line-height: 20px;
+    height: 50px;
+}
+
+@media only screen and (max-width: 780px){
+    section .sec2content{
+        overflow: hidden;
+    }/*수정*/
+   section.sec1 .icon{
+    width: 25%;
+    float: left;
+} 
+    section.sec1 .best{
+        height: 200px;
+    }
+}
+/*sec2contents 시작*/
+section.sec2{
+    width: 100%;
+    height: 900px;/*1076px;*/
+    background: #f6f6f6;
+}
+section .sec2contents{
+    width: 100%;
+    max-width: 1092px;
+    height: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+section h2{
+    margin-top: 70px;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+}
+section p.h2title{
+     margin-bottom: 50px;
+    text-align: center;
+    color: #777;
+}
+section .sec2content .sec2gallery{
+    height: 170px;/*안쪽그림자넣기*/
+}
+section .sec2content .sec2galltxt{
+    padding-top: 127px;
+    padding-left: 15px;
+}
+section .sec2content .sec2galltxt p{
+    color: #fff;
+}
+section .sec2content .sec2galltxt span{
+    font-size: 14px;
+}
+section .sec2content .sec2galltxt span.date{
+    color:dodgerblue;
+}
+section .sec2content .sec2galltxt span.days{
+    padding-left: 10px;
+    color: #ccc;
+}
+section .sec2content .sec2txt{
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    margin-bottom: 30px;
+    border: 1px solid #dfdfdf;
+    box-sizing: border-box;
+}
+section .sec2content .sec2txt .sec2txtcontent{
+    padding: 10px 14px;
+}
+section .sec2content .sec2txt p{
+    color: #6f6f6f;
+    font-size: 14px;
+    padding-bottom: 14px;
+}
+@media only screen and (max-width: 640px){
+	section .sec2content .sec2galltxt p,span{
+		font-size: 13px;
+	}
+	section .sec2content .sec2txt p{
+		font-size: 12px;
+		padding-bottom: 12px;
+	}
+}
+section .secviewall{
+    width: 340px;
+    height: 50px;
+    border: 1px solid #dfdfdf;
+    background: #fff;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 auto;
+}
+@media only screen and (max-width: 940px){
+    section.sec2{
+    width: 100%;
+    height: 1250px;/*1076px;*/
+}
+    section .sec2content{
+        width: 50%;
+    }
+    section .sec2contents{
+        overflow: visible;
+        height: 1050px;
+    }
+}
+/*sec3 시작*/
+section.sec3{
+    width: 100%;
+    max-width: 1902px;
+    height: 1030px;
+}
+section .sec3contents{
+    width: 100%;
+    max-width: 1092px;
+    height: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+section .sec3content .sec3gallery{
+    height: 320px;/*안쪽그림자넣기*/
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-bottom: 1px solid #dfdfdf;
+    box-sizing: border-box;
+    position: relative;
+}
+section .sec3content .sec3gallery .overlay{
+    display: block;
+    width: 100%;
+    height: 320px;
+    position: absolute;
+    top: 0;
+    background: rgba(0,0,0,0.4);
+}
+section .sec3content .sec3txt{
+    width: 90%;
+    height: 150px;
+    background: #fff;  
+    border: 1px solid #dfdfdf;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+    top: 261px;
+    transition: .5s ease;
+    cursor: pointer;
+}
+section .sec3content .sec3txt:hover{
+    top: 170px;   
+}
+section .sec3content .sec3txt .sec3txtcontent{
+    padding: 20px 30px 0 ;
+    text-align: center;
+}
+section .sec3content .sec3txt p{
+    color: #6f6f6f;
+    font-size: 14px;
+    
+}
+section .sec3content .sec3txt p.sec3TxtTitle{
+    color: #000;
+    font-size: 15px;
+    font-weight: 999;
+    margin-bottom: 20px;
+}
+@media only screen and (max-width: 940px){
+    section.sec3{
+    width: 100%;
+    height: 1380px;/*1076px;*/
+}   
+    section .sec3contents{
+        overflow: visible;
+        height: 1180px;
+    }
+    section .sec3content{
+        width: 50%;
+    }
+}
+
+/*sec4 시작*/
+section.sec4{
+    width: 100%;
+    max-width: 1902px;
+    height: 1038px;
+     background: #f6f6f6;
+}
+section.sec4 h2{
+    margin-bottom: 40px;
+}
+section .sec4contents{
+    width: 100%;
+    max-width: 1092px;
+    height: 1038px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+section .sec4content .sec4gallery{
+    height: 260px;/*안쪽그림자넣기*/
+    margin-bottom: 30px;
+}
+section .sec4content .sec4gallery.sec4Etc{
+    height: 550px;
+    margin-bottom: 0;
+}
+section .sec4content span.sec4Txt{
+    display: block;
+    text-align: center;
+    line-height: 260px;
+    font-size: 20px;
+    font-weight: 999;
+    color: #fff;
+    text-shadow: 1px 1px 1px #222;
+}
+section .sec4content .sec4gallery.sec4Etc span.sec4Txt{
+    line-height: 550px;
+}
+@media only screen and (max-width: 765px){
+     section.sec4{
+        height: auto;
+    }
+    section .sec4contents{
+        height: 1700px;
+    }
+    section .sec4content{
+        height: 150px;
+        overflow: hidden;
+    }
+    section .sec4content span.sec4Txt{
+       line-height: 150px; 
+    }
+    section .sec4content .sec4gallery.sec4Etc{
+        height: 150px;       
+    }
+    section .sec4content .sec4gallery.sec4Etc span.sec4Txt{
+       line-height: 150px; 
+    }
+}
+
+/*sec5 시작*/
+section.sec5{
+    width: 100%;
+    height: 383px;
+    background: url(../img/sec5bg.png) 50% no-repeat;
+    background-size: cover;
+     position: relative;
+}
+section .sec5ph{
+    position: absolute;
+    bottom: 0;
+}
+section .sec5Txts{
+    float: right;
+    width: 45%;
+    height: 100%;
+}
+section .sec5Txts .sec5Txt{
+    padding-top: 15%;
+}
+
+section .sec5Txts .sec5Txt h3{
+    font-size: 25px;
+    color:dodgerblue;
+}
+section .sec5Txts .sec5Txt p{
+    margin-top: 10px;
+    font-size: 15px;
+    color: #6f6f6f;
+    line-height: 16px;
+}
+section .sec5Txts ul.sec5boxs{
+    margin-top: 50px;
+    overflow: hidden;
+}
+section .sec5Txts ul.sec5boxs li{
+    float: left;
+    width: 40%;
+}
+@media only screen and (max-width: 860px){
+    section .sec5ph{
+        display: none;
+    } 
+    section .sec5Txts{
+        text-align: center;
+        width: 100%;
+        height: 383px;
+    }
+    section .sec5Txts ul.sec5boxs>li{
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+/*footer 시작*/
+footer{
+    width: 100%;
+    height: 225px;
+}
+footer .footerdown{
+    font-size: 14px;
+    height: 22px;
+     background: #2e333d;
+    color: #c9c9c9;
+    margin: 0 auto;
+    font-size: 10px;
+    line-height: 22px;
+}
+footer .footerdown .footerdownContent{
+    width: 100%;
+    max-width: 1092px;
+    margin: 0 auto;
+    height: 100%;
+}
+footer .footerdown .right{
+    float: left;
+}
+footer .footerdown .question{
+    float: right;
+}
+footer .footerup{
+    width: 100%;
+    height: 203px;
+    background: #363c48;
+}
+footer .footerup ul.footerContents{
+    overflow: hidden;
+    width: 100%;
+    max-width: 1092px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+footer .footerup ul.footerContents>li{
+    float: left;
+    width: 25%;
+}
+footer .footerup h5{
+    font-size: 11px;
+    color: #999;
+}
+footer .footerup ul.footerupmenu>li{
+    font-size: 11px;
+     color: #fff;
+    line-height: 25px;
+}
+footer .footerup .footerbar{
+    width: 90%;
+    height: 0.5px;
+    background:#999999;
+    margin: 5px 0;
+}
+footer .footerBoxs{
+    overflow: hidden;
+}
+footer .footerBox1,.footerBox2{
+    width: 40%;
+    height: 30px;
+    float: left;
+    color: #fff;
+    font-size: 12px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    line-height: 30px;
+    margin-right: 10px;
+    margin-top: 15px;
+    text-indent: 5px;
+}
+@media only screen and (max-width: 640px){
+	footer .footerBox1,.footerBox2{
+		font-size: 10px;
+		margin-right: 5px;
+	}
+}
+footer .footericons{
+    overflow: hidden;
+}
+footer .footericon1,.footericon2{
+    margin-top: 10px;
+    margin-right: 10px;
+    float: left;
+}
+@media only screen and (max-width: 640px){
+	footer .footericon1,.footericon2{
+		margin-right: 5px;
+	}
+}
